@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexibility</title>
+</head>
+<body>
+    flex-container
+    <div class="flex-container">
+        <div class="flex-items flex-item-1">flex-item-1</div>
+        <div class="flex-items flex-item-2"> 
+            <ul>
+            <li>home</li>
+            <li>products</li>
+            <li>about</li>
+            <li>career</li>
+            </ul>
+        </div>
+        <div class="flex-items flex-item-3">flex-item-3</div>
+    </div>
+</body>
+</html>
+<style>
+    body{
+        margin: 0%;
+        background-color: rgba(0, 0, 0, 0.823);
+        color: bisque;
+    }
+    .flex-container{
+        display: flex;
+        background-color: bisque;
+        justify-content:space-around;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        color: black;
+    }
+    .flex-items{
+        width: 300px;
+        background-color: rgb(250, 254, 254);
+    }
+    .flex-item-1{
+        min-height: 100px;
+        border: 10px blue solid;
+        flex-shrink: 0;
+    }
+    .flex-item-1:hover{
+        background-color: rgb(0, 119, 255);
+    }
+    .flex-item-2:hover{
+        background-color: rgb(255, 0, 179);
+    }
+    .flex-item-3:hover{
+        background-color: rgb(1, 142, 92);
+    }
+    .flex-item-2{
+        min-height: 200px;
+        border: 10px rgb(255, 0, 60) solid;
+        /* flex-grow: 1; */
+    }
+    .flex-item-3{
+        min-height: 300px;
+        border: 10px rgb(0, 255, 38) solid;
+        /* flex-grow: 1; */
+    }
+    
+</style>
