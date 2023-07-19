@@ -6,6 +6,8 @@
     <title>Top Navigation</title>
 </head>
 <body>
+
+    <div class="dark" id="dark">🌓</div>
     <div class="flex-container">
         <div class="flex-items flex-1">Aqua</div>
         <div class="flex-items flex-2">
@@ -16,6 +18,7 @@
                 <li>career</li>
             </ul>
         </div>
+        
     </div>
     <div class="gallery">
         <div class="box box-1">
@@ -30,16 +33,20 @@
     body{
         font-family: 'Stencil';
         height: 2000px;
+        background-color:#f3ffff2c;
+        color: #000;
     }
     .flex-container{
+        margin-top: -35px;
         display: flex;
         justify-content: space-around;
         align-items: center;
         flex-wrap: wrap;
-        padding: 8px;
+        padding: 0 8px 8px 8px;
         text-align: right;
         position: sticky;
-        top: 0;
+        top: 0px;
+        z-index: -1;
     }
     ul{
         margin: 0%;
@@ -49,6 +56,7 @@
         display: inline-block;
         padding-left: 7%;
     }
+    
     .flex-1{
         font-size: 2.5em;     
     }
@@ -64,6 +72,13 @@
         height: 300px;
         width: 550px; 
         
+    }
+    .dark{
+        display: block;
+        position: sticky;
+        top: 10px;
+        text-align: right;
+        font-size: 1.5em;
     }
     
     img{
@@ -84,3 +99,26 @@
     }
 
 </style>
+<script>
+    document.getElementById('dark').addEventListener('click',()=>{
+        if((document.getElementById('dark').innerHTML)=="🌓")
+        {
+            document.getElementsByTagName('body')[0].style.backgroundColor="#1f1f1f";
+            document.getElementsByTagName('body')[0].style.color="#dddddd";
+            document.getElementsByClassName('flex-2')[0].style.color="#dddddd";
+            document.getElementsByClassName('box')[0].style.borderColor ="white";
+            document.getElementsByClassName('box-2')[0].style.borderColor ="white";
+            document.getElementById('dark').innerHTML="💡";
+
+        }
+        else
+        {
+            document.getElementsByTagName('body')[0].style.backgroundColor="#f3ffff2c";
+            document.getElementsByTagName('body')[0].style.color="black";
+            document.getElementsByClassName('flex-2')[0].style.color="rgba(0, 0, 0, 0.7)";
+            document.getElementsByClassName('box')[0].style.borderColor ="#dddddd";
+            document.getElementsByClassName('box-2')[0].style.borderColor ="#dddddd";
+            document.getElementById('dark').innerHTML="🌓"
+        }
+    })
+</script>
