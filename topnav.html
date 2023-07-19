@@ -7,7 +7,7 @@
 </head>
 <body>
 
-    <div class="dark" id="dark">🌓</div>
+    
     <div class="flex-container">
         <div class="flex-items flex-1">Aqua</div>
         <div class="flex-items flex-2">
@@ -16,6 +16,7 @@
                 <li>products</li>
                 <li>about</li>
                 <li>career</li>
+                <li><div class="dark" id="dark">🌓</div></li>
             </ul>
         </div>
         
@@ -23,7 +24,7 @@
     <div class="gallery">
         <div class="box box-1">
             <div class="box box-2">
-            <img alt="shell in hand" src="https://images.unsplash.com/photo-1472152083436-a6eede6efad9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=869&q=80">
+            <img alt="shell in hand" src="../shell.avif">
             </div>
         </div> 
     </div>
@@ -46,19 +47,42 @@
         text-align: right;
         position: sticky;
         top: 0px;
-        z-index: -1;
+        
     }
     ul{
         margin: 0%;
         padding: 0%;
+        
     }
     li{
         display: inline-block;
-        padding-left: 7%;
+        margin-left: 7%;
+        width:fit-content;
+        
+    }
+    li:last-child{
+        
+    }
+    li:nth-child(4){
+        position: relative;
+    }
+    li:nth-child(4):hover::after{
+        content: "Dev-Ops";
+        position: absolute;
+        width: 200px;
+        text-align: center;
+        color: #000;
+        top: 100%;
+        left: 0;
+        right: 0;
+        padding: 5px;
+        background-color: #1aa9ab0f;
+
     }
     
     .flex-1{
-        font-size: 2.5em;     
+        font-size: 2.5em;
+        flex-grow: 1;     
     }
     .flex-2{
         font-size: 1.0em;
@@ -66,36 +90,50 @@
         width: 50%;
         text-transform: uppercase;
         font-weight: 100;
+        flex-grow: 1;
     }
     .box{
         border: 1px rgba(0, 0, 0, 0.205) solid;
-        height: 300px;
-        width: 550px; 
-        
-    }
+        height: 50vh; /* Responsive height, 30% of the viewport height */
+        width: 40vw; /* Responsive width, 60% of the viewport width */
+        min-width: 550px;
+        max-height: 300px;
+        max-width: 550px;
+    }   
     .dark{
-        display: block;
+        display: flex;
         position: sticky;
         top: 10px;
         text-align: right;
         font-size: 1.5em;
+        /* background-color: #1aa9ab; */
+        justify-content: end;
+        
     }
     
     img{
         width:inherit;
         height: inherit;
+        min-width: 550px;
+        max-height: 300px;
+        max-width: 550px;
     }
     .gallery{
         margin-top: 30px;
         display: flex;
         justify-content: center;
-        
     }
     .box-2{
         margin: 15px 0 0 15px;
     }
     li:hover{
         color: #1aa9ab;
+
+    }
+    @media (orientation:portrait){
+        body{
+            font-size:200%;
+        }
     }
 
 </style>
