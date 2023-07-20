@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bangladesh</title>
+</head>
+<body>
+    <div class="container">
+        <div class="green-rect">
+            <div class="red-circle"></div>
+        </div>
+
+    </div>
+</body>
+</html>
+<style>
+:root{
+    --unit:10vw;
+}
+body{
+    margin: 0;
+    background-color: rgb(18, 18, 18);
+}
+.container{
+    
+    height: 98vh;
+    position: relative;
+}
+.green-rect{
+    position: absolute;
+    border: 1px green solid;
+    height: calc(var(--unit) * 2);
+    width: calc(var(--unit) * 3);
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    background-color: green;
+}
+.red-circle{
+    position: absolute;
+    border: 1px rgb(62, 62, 62) solid;
+    min-height: var(--unit); 
+    min-width: var(--unit);
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    border-radius: 50%;
+    background-color: red;
+}
+</style>
